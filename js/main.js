@@ -325,7 +325,83 @@ function initFooterYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
-/* ── 5. CALL NOW — DESKTOP CLICK PREVENTION ─────────────── */
+/* ── 5. TESTIMONIAL CAROUSEL ────────────────────────────── */
+function initTestimonialCarousel() {
+  const imgs    = Array.from(document.querySelectorAll('.tc-img'));
+  const dots    = Array.from(document.querySelectorAll('.tc-dot'));
+  const prevBtn = document.querySelector('.tc-prev');
+  const nextBtn = document.querySelector('.tc-next');
+  const qText   = document.querySelector('.tc-quote__text');
+  const qName   = document.querySelector('.tc-quote__name');
+  const qRole   = document.querySelector('.tc-quote__role');
+
+  if (!imgs.length) return;
+
+  const QUOTES = [
+    {
+      text: '"Working with Mayan Design Studio completely transformed our office. The team understood our brand vision immediately and delivered something that exceeded every expectation. Our clients notice the difference the moment they walk in."',
+      name: 'Sarah M.',
+      role: 'Law Firm Owner, Brevard County'
+    },
+    {
+      text: '"Our home renovation was a dream experience from consultation through installation. Every detail was thoughtful and intentional. We finally have a home that feels like us — and we couldn\'t be happier."',
+      name: 'James & Lisa T.',
+      role: 'Residential Clients, Indian Harbour Beach'
+    },
+    {
+      text: '"As a local contractor, partnering with Mayan Design Studio has been invaluable. Their specifications are clear, their communication is excellent, and their clients are always thrilled. It\'s a pleasure to build what they design."',
+      name: 'Roberto A.',
+      role: 'General Contractor, Space Coast'
+    }
+  ];
+
+  // Each slide maps to a quote (2 slides per quote)
+  const SLIDE_QUOTE = [0, 0, 1, 1, 2, 2];
+
+  let current = 0;
+  let autoTimer;
+
+  const INTERVAL = 5000;
+
+  function show(index) {
+    const next = ((index % imgs.length) + imgs.length) % imgs.length;
+
+    imgs[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    dots[current].setAttribute('aria-selected', 'false');
+
+    current = next;
+
+    imgs[current].classList.add('active');
+    dots[current].classList.add('active');
+    dots[current].setAttribute('aria-selected', 'true');
+
+    // Update quote
+    const q = QUOTES[SLIDE_QUOTE[current]];
+    qText.style.opacity = '0';
+    setTimeout(() => {
+      qText.textContent  = q.text;
+      qName.textContent  = q.name;
+      qRole.textContent  = q.role;
+      qText.style.opacity = '1';
+    }, 220);
+  }
+
+  function startTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => show(current + 1), INTERVAL);
+  }
+
+  prevBtn.addEventListener('click', () => { show(current - 1); startTimer(); });
+  nextBtn.addEventListener('click', () => { show(current + 1); startTimer(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); startTimer(); }));
+
+  // Initialise first slide
+  show(0);
+  startTimer();
+}
+
+/* ── 6. CALL NOW — DESKTOP CLICK PREVENTION ─────────────── */
 /**
  * On desktop (mouse/trackpad devices), the "Call Now" button
  * shows as a button but takes no action when clicked.
@@ -352,6 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroCanvas();
   initHeader();
   initScrollReveal();
+  initTestimonialCarousel();
   initFooterYear();
   initCallButtons();
 });

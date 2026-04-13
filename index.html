@@ -290,41 +290,54 @@
   <!-- ═══════════════════════════════════════
        TESTIMONIALS
   ═══════════════════════════════════════ -->
-  <section id="testimonials" class="section section--dark">
+  <section id="testimonials" class="section section--dark section--testimonials">
     <div class="container">
-      <div class="section-header reveal">
+
+      <div class="section-header section-header--compact reveal">
         <span class="section-label section-label--light">Client Stories</span>
         <h2 class="section-title section-title--light">Testimonials</h2>
-        <p class="section-subtitle section-subtitle--light">The spaces we design are only as meaningful as the lives lived inside them. Here's what our clients say.</p>
       </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal">
-          <div class="testimonial-card__quote">&ldquo;</div>
-          <p class="testimonial-card__text">Working with Mayan Design Studio completely transformed our office. The team understood our brand vision immediately and delivered something that exceeded every expectation. Our clients notice the difference the moment they walk in.</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__name">Sarah M.</div>
-            <div class="testimonial-card__role">Law Firm Owner, Brevard County</div>
+      <div class="tc-carousel reveal">
+
+        <!-- Images -->
+        <div class="tc-images" aria-live="polite">
+          <img class="tc-img active" src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/9b65ae62-c4c0-40f6-924f-6bb11521c9c6/root/1776050079772_mayan-design-studio-modern-home-portfolio.jpg"      alt="Bright and airy home interior by Mayan Design Studio featuring natural wood textures and seamless indoor-outdoor transition." draggable="false">
+          <img class="tc-img"        src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/9b65ae62-c4c0-40f6-924f-6bb11521c9c6/root/1776050079024_mayan-design-studio-minimalist-home-interior.jpg"      alt="Minimalist home interior with neutral tones, mid-century modern furniture, and indoor plants in a bright, airy living space." draggable="false">
+          <img class="tc-img"        src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/9b65ae62-c4c0-40f6-924f-6bb11521c9c6/root/1776050078234_modern-organic-bathroom-remodel-japandi-style.jpg"         alt="Modern organic bathroom design featuring a light wood fluted accent wall, LED backlit circular mirrors, and gold plumbing fixtures." draggable="false">
+          <img class="tc-img"        src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/9b65ae62-c4c0-40f6-924f-6bb11521c9c6/root/1776050077409_mayan-design-modern-farmhouse-kitchen.jpg"                alt="Modern farmhouse kitchen design with gold hardware, globe pendant lights, and a spacious walnut wood island base." draggable="false">
+          <img class="tc-img"        src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/9b65ae62-c4c0-40f6-924f-6bb11521c9c6/root/1776050076644_mayan-design-studio-luxury-kitchen-portfolio.jpg"          alt="Luxury kitchen interior designed by Mayan Design Studio showing a symmetrical cabinet layout and integrated range hood." draggable="false">
+          <img class="tc-img"        src="https://pbrlhyansxjdndccwtau.supabase.co/storage/v1/object/public/media-public/9b65ae62-c4c0-40f6-924f-6bb11521c9c6/root/1776050075828_mayan-design-studio-minimalist-kitchen-interiors.jpg"      alt="Minimalist kitchen interior design by Mayan Design Studio with natural wood accents, white subway tile backsplash, and bright window lighting." draggable="false">
+        </div>
+
+        <!-- Quote -->
+        <div class="tc-quote">
+          <p class="tc-quote__text"></p>
+          <div class="tc-quote__author">
+            <span class="tc-quote__name"></span>
+            <span class="tc-quote__sep"> — </span>
+            <span class="tc-quote__role"></span>
           </div>
         </div>
 
-        <div class="testimonial-card reveal" style="--reveal-delay: 0.12s;">
-          <div class="testimonial-card__quote">&ldquo;</div>
-          <p class="testimonial-card__text">Our home renovation was a dream experience from consultation through installation. Every detail was thoughtful and intentional. We finally have a home that feels like us — and we couldn't be happier.</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__name">James &amp; Lisa T.</div>
-            <div class="testimonial-card__role">Residential Clients, Indian Harbour Beach</div>
+        <!-- Controls -->
+        <div class="tc-controls">
+          <button class="tc-btn tc-prev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="tc-dots" role="tablist" aria-label="Carousel navigation">
+            <button class="tc-dot active" role="tab" aria-label="Image 1" aria-selected="true"></button>
+            <button class="tc-dot" role="tab" aria-label="Image 2" aria-selected="false"></button>
+            <button class="tc-dot" role="tab" aria-label="Image 3" aria-selected="false"></button>
+            <button class="tc-dot" role="tab" aria-label="Image 4" aria-selected="false"></button>
+            <button class="tc-dot" role="tab" aria-label="Image 5" aria-selected="false"></button>
+            <button class="tc-dot" role="tab" aria-label="Image 6" aria-selected="false"></button>
           </div>
+          <button class="tc-btn tc-next" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
 
-        <div class="testimonial-card reveal" style="--reveal-delay: 0.24s;">
-          <div class="testimonial-card__quote">&ldquo;</div>
-          <p class="testimonial-card__text">As a local contractor, partnering with Mayan Design Studio has been invaluable. Their specifications are clear, their communication is excellent, and their clients are always thrilled. It's a pleasure to build what they design.</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__name">Roberto A.</div>
-            <div class="testimonial-card__role">General Contractor, Space Coast</div>
-          </div>
-        </div>
       </div>
 
       <div class="section-cta reveal">
