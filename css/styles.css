@@ -530,14 +530,14 @@ h1, h2, h3, h4 {
 }
 
 .feature-card__title {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  font-weight: 700;
   color: var(--white);
   margin-bottom: 10px;
 }
 
 .feature-card__desc {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-light);
   line-height: 1.65;
 }
