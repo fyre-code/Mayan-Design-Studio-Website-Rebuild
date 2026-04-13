@@ -154,6 +154,12 @@ class FloorPlanCanvas {
     this.MAX_ACTIVE     = 5;     // rooms visible at once
     this.SPAWN_INTERVAL = 1600;  // ms between spawns
 
+    // Reduce complexity on small screens
+    if (window.innerWidth < 600) {
+      this.MAX_ACTIVE     = 2;
+      this.SPAWN_INTERVAL = 2400;
+    }
+
     // Appearance
     this.LINE_COLOR = '#8FAF8C';
     this.MAX_ALPHA  = 0.28;
@@ -292,6 +298,7 @@ class FloorPlanCanvas {
 function initHeroCanvas() {
   const canvas = document.getElementById('hero-canvas');
   if (!canvas) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   new FloorPlanCanvas(canvas);
 }
 
@@ -379,6 +386,17 @@ function initTestimonialCarousel() {
   nextBtn.addEventListener('click', () => { show(current + 1); startTimer(); });
   dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); startTimer(); }));
 
+  // Touch swipe
+  const tcImages = document.querySelector('.tc-images');
+  if (tcImages) {
+    let touchStartX = 0;
+    tcImages.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    tcImages.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { show(dx < 0 ? current + 1 : current - 1); startTimer(); }
+    }, { passive: true });
+  }
+
   // Initialise first slide
   show(0);
   startTimer();
@@ -419,6 +437,17 @@ function initPortfolioCarousel() {
   prevBtn.addEventListener('click', () => { show(current - 1); startTimer(); });
   nextBtn.addEventListener('click', () => { show(current + 1); startTimer(); });
   dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); startTimer(); }));
+
+  // Touch swipe
+  const pcImages = document.querySelector('.pc-images');
+  if (pcImages) {
+    let touchStartX = 0;
+    pcImages.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    pcImages.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { show(dx < 0 ? current + 1 : current - 1); startTimer(); }
+    }, { passive: true });
+  }
 
   show(0);
   startTimer();

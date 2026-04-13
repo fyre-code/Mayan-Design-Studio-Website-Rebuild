@@ -94,7 +94,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 15px 38px;
-  width: 340px;
+  width: min(340px, 100%);
   text-align: center;
   border: 2px solid transparent;
   cursor: pointer;
@@ -158,7 +158,7 @@ h1, h2, h3, h4 {
 .btn--lg {
   padding: 18px 48px;
   font-size: 0.82rem;
-  width: 340px;
+  width: min(340px, 100%);
 }
 
 /* ── CTA Stack (Book + Call Now stacked vertically) ─────── */
@@ -1049,7 +1049,7 @@ h1, h2, h3, h4 {
 
   .projects-table     { grid-template-columns: 1fr; }
   .partners-grid      { grid-template-columns: 1fr 1fr; }
-  .features-grid      { grid-template-columns: 1fr 1fr 1fr; }
+  .features-grid      { grid-template-columns: 1fr 1fr; }
   .process-cards      { flex-direction: column; }
   .process-arrow      { transform: rotate(90deg); width: auto; height: 40px; }
   .testimonials-grid  { grid-template-columns: 1fr; }
@@ -1061,21 +1061,35 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   :root { --section-pad: 56px; }
 
-  .hero-headline { font-size: 2.4rem; }
+  /* Hero headline — allow wrapping and stay responsive */
+  .hero-headline      { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .hero-headline__line { white-space: normal; }
 
+  /* Grids */
   .partners-grid     { grid-template-columns: 1fr; }
   .features-grid     { grid-template-columns: 1fr; }
   .process-cards     { flex-direction: column; }
   .footer-grid       { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom__inner { align-items: center; }
 
+  /* CTA banner */
   .cta-banner__actions { flex-direction: column; align-items: stretch; text-align: center; }
-  .btn--lg { width: 100%; text-align: center; }
 
+  /* Section spacing */
   .section-header { margin-bottom: 44px; }
 
-  .projects-table__cell--content .project-card__image { height: 200px; }
-  .project-card__body { padding: 24px; }
-  .btn { width: min(340px, 88vw); }
-  .btn--lg { width: min(340px, 88vw); }
+  /* Projects table — reduce side padding */
+  .projects-table__cell--desc,
+  .projects-table__cell--item,
+  .projects-table__cell--cta { padding-left: 20px; padding-right: 20px; }
+
+  /* Feature cards — reduce padding */
+  .feature-card { padding: 24px 20px; }
+
+  /* Footer logo */
+  .footer-logo { height: 56px; }
+
+  /* Carousel touch targets */
+  .tc-btn, .pc-btn { width: 44px; height: 44px; }
+  .tc-dot, .pc-dot { width: 12px; height: 12px; }
 }
