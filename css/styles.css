@@ -519,8 +519,8 @@ h1, h2, h3, h4 {
 }
 
 .feature-card__icon {
-  width: 48px;
-  height: 48px;
+  width: 96px;
+  height: 96px;
   margin: 0 auto 18px;
   color: var(--sage);
 }
