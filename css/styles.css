@@ -90,7 +90,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   font-family: var(--ff-body);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 15px 38px;
@@ -201,14 +201,14 @@ h1, h2, h3, h4 {
 .section-title--light { color: var(--white); }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #6a6a6a;
   line-height: 1.75;
 }
 .section-subtitle--light { color: var(--text-light); }
 
 .section-body {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-body);
   line-height: 1.78;
   margin-top: 20px;
@@ -337,7 +337,7 @@ h1, h2, h3, h4 {
 
 .hero-tagline {
   font-family: var(--ff-body);
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 300;
   color: var(--text-light);
   line-height: 1.65;
@@ -414,7 +414,7 @@ h1, h2, h3, h4 {
 }
 
 .projects-table__text {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-body);
   line-height: 1.72;
 }
@@ -439,7 +439,7 @@ h1, h2, h3, h4 {
 .check-list li {
   position: relative;
   padding-left: 34px;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-body);
   line-height: 1.55;
 }
@@ -482,7 +482,7 @@ h1, h2, h3, h4 {
 .arrow-list li {
   position: relative;
   padding-left: 36px;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--slate);
   line-height: 1.55;
   font-weight: 400;
@@ -537,7 +537,7 @@ h1, h2, h3, h4 {
 }
 
 .feature-card__desc {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-light);
   line-height: 1.65;
 }
@@ -581,7 +581,7 @@ h1, h2, h3, h4 {
 }
 
 .process-card__text {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-body);
   line-height: 1.75;
   max-width: 260px;
@@ -855,7 +855,7 @@ h1, h2, h3, h4 {
 }
 
 .cta-banner__sub {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-light);
   line-height: 1.75;
   margin-bottom: 44px;
@@ -895,7 +895,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-tagline {
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.72;
   color: var(--text-light);
   margin-bottom: 24px;
@@ -943,12 +943,12 @@ h1, h2, h3, h4 {
 }
 .footer-nav__list a:hover { color: var(--white); }
 
-.footer-address p { font-size: 1rem; line-height: 1.8; }
+.footer-address p { font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.8; }
 .footer-address a { color: var(--text-light); }
 .footer-address a:hover { color: var(--gold); }
 
 .footer-hours {
-  font-size: 0.88rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: rgba(248,246,241,0.55);
   margin-top: 18px;
   line-height: 1.6;
