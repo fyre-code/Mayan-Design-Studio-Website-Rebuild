@@ -953,6 +953,69 @@ h1, h2, h3, h4 {
 .footer-bottom a:hover { color: var(--sage-light); }
 
 /* ═══════════════════════════════════════════════════════════
+   SECTION MATERIAL TEXTURES
+   Technique: solid colour overlay (high alpha) sits above the
+   texture image — colour scheme is preserved, texture is felt
+   rather than seen (~9–12% bleed-through).
+   ═══════════════════════════════════════════════════════════ */
+
+/* Welcome — light marble: pale veining on cream */
+#welcome {
+  background:
+    linear-gradient(rgba(248,246,241,0.91), rgba(248,246,241,0.91)),
+    url('https://images.unsplash.com/photo-1517705008128-361805f42e86?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* Commercial & Residential — light oak wood grain */
+#projects {
+  background:
+    linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)),
+    url('https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* Local Partners — woven linen / natural canvas */
+#partners {
+  background:
+    linear-gradient(rgba(232,240,231,0.89), rgba(232,240,231,0.89)),
+    url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* Why Choose Us — dark granite on deep slate */
+#why-us {
+  background:
+    linear-gradient(rgba(44,62,53,0.88), rgba(44,62,53,0.88)),
+    url('https://images.unsplash.com/photo-1484955172689-05a61e0c3b26?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* Our Process — warm travertine / veined stone */
+#process {
+  background:
+    linear-gradient(rgba(248,246,241,0.91), rgba(248,246,241,0.91)),
+    url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* Testimonials — rich dark leather */
+#testimonials {
+  background:
+    linear-gradient(rgba(44,62,53,0.88), rgba(44,62,53,0.88)),
+    url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* See Our Work — brushed concrete */
+#portfolio {
+  background:
+    linear-gradient(rgba(248,246,241,0.91), rgba(248,246,241,0.91)),
+    url('https://images.unsplash.com/photo-1508615970927-1e04cd6f98b4?w=1600&q=70&auto=format')
+    center / cover;
+}
+
+/* ═══════════════════════════════════════════════════════════
    RESPONSIVE — TABLET (≤ 900px)
    ═══════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
