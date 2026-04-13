@@ -384,7 +384,47 @@ function initTestimonialCarousel() {
   startTimer();
 }
 
-/* ── 6. CALL NOW — DESKTOP CLICK PREVENTION ─────────────── */
+/* ── 6. PORTFOLIO CAROUSEL ──────────────────────────────── */
+function initPortfolioCarousel() {
+  const slides  = Array.from(document.querySelectorAll('.pc-slide'));
+  const dots    = Array.from(document.querySelectorAll('.pc-dot'));
+  const prevBtn = document.querySelector('.pc-prev');
+  const nextBtn = document.querySelector('.pc-next');
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let autoTimer;
+  const INTERVAL = 5000;
+
+  function show(index) {
+    const next = ((index % slides.length) + slides.length) % slides.length;
+
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    dots[current].setAttribute('aria-selected', 'false');
+
+    current = next;
+
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    dots[current].setAttribute('aria-selected', 'true');
+  }
+
+  function startTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => show(current + 1), INTERVAL);
+  }
+
+  prevBtn.addEventListener('click', () => { show(current - 1); startTimer(); });
+  nextBtn.addEventListener('click', () => { show(current + 1); startTimer(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); startTimer(); }));
+
+  show(0);
+  startTimer();
+}
+
+/* ── 7. CALL NOW — DESKTOP CLICK PREVENTION ─────────────── */
 /**
  * On desktop (mouse/trackpad devices), the "Call Now" button
  * shows as a button but takes no action when clicked.
@@ -412,6 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initScrollReveal();
   initTestimonialCarousel();
+  initPortfolioCarousel();
   initFooterYear();
   initCallButtons();
 });
