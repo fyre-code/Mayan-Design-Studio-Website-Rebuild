@@ -407,7 +407,7 @@ h1, h2, h3, h4 {
 
 .projects-table__subhead {
   font-family: var(--ff-head);
-  font-size: 1.4rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   color: var(--slate);
   margin-bottom: 14px;
@@ -522,7 +522,7 @@ h1, h2, h3, h4 {
 
 .feature-card__title {
   font-family: var(--ff-head);
-  font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   color: var(--white);
   margin-bottom: 10px;
@@ -566,7 +566,7 @@ h1, h2, h3, h4 {
 
 .process-card__title {
   font-family: var(--ff-head);
-  font-size: 1.2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   color: var(--slate);
   margin-bottom: 14px;
