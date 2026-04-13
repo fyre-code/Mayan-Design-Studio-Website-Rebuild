@@ -423,7 +423,6 @@ h1, h2, h3, h4 {
 .projects-table__cell--item {
   padding: 14px 40px;
   background: var(--cream);
-  border-top: 1px solid rgba(44,62,53,0.1);
 }
 
 .check-item {
@@ -456,7 +455,6 @@ h1, h2, h3, h4 {
 .projects-table__cell--cta {
   padding: 32px 40px;
   background: var(--cream);
-  border-top: 1px solid rgba(44,62,53,0.1);
   display: flex;
   justify-content: center;
 }
