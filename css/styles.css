@@ -971,6 +971,11 @@ h1, h2, h3, h4 {
 
   .projects-table     { grid-template-columns: 1fr; }
   .projects-table__cell:nth-child(odd) { border-right: none; border-bottom: 1px solid rgba(44,62,53,0.1); }
+  /* Residential first: desc → checklist, then Commercial: desc → checklist */
+  .projects-table__cell:nth-child(1) { order: 1; } /* Residential desc */
+  .projects-table__cell:nth-child(3) { order: 2; } /* Residential checklist */
+  .projects-table__cell:nth-child(2) { order: 3; } /* Commercial desc */
+  .projects-table__cell:nth-child(4) { order: 4; } /* Commercial checklist */
   .partners-grid      { grid-template-columns: 1fr 1fr; }
   .features-grid      { grid-template-columns: 1fr 1fr; }
   .process-steps      { grid-template-columns: 1fr 1fr; gap: 40px 32px; }
