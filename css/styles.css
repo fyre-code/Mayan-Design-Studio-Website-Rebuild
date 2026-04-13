@@ -886,7 +886,7 @@ h1, h2, h3, h4 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.2fr;
+  grid-template-columns: 2fr 1.2fr;
   gap: 60px;
   padding-bottom: 64px;
   border-bottom: 1px solid rgba(143,175,140,0.15);
@@ -1064,8 +1064,6 @@ h1, h2, h3, h4 {
   .process-cards      { flex-direction: column; }
   .process-arrow      { transform: rotate(90deg); width: auto; height: 40px; }
   .testimonials-grid  { grid-template-columns: 1fr; }
-  .footer-grid        { grid-template-columns: 1fr 1fr; gap: 40px; }
-
   .footer-brand { grid-column: 1 / -1; }
 }
 
