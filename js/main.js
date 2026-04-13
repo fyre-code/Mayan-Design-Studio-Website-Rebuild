@@ -296,28 +296,8 @@ function initHeroCanvas() {
 }
 
 /* ── 2. HEADER SCROLL BEHAVIOUR ─────────────────────────── */
-function initHeader() {
-  const header = document.getElementById('site-header');
-  if (!header) return;
-
-  let ticking = false;
-
-  const update = () => {
-    if (window.scrollY > 72) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-    ticking = false;
-  };
-
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(update);
-      ticking = true;
-    }
-  }, { passive: true });
-}
+// Header scrolls with the page — no scroll listener needed.
+function initHeader() {}
 
 /* ── 3. SCROLL REVEAL ────────────────────────────────────── */
 function initScrollReveal() {

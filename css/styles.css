@@ -234,20 +234,9 @@ h1, h2, h3, h4 {
    HEADER
    ═══════════════════════════════════════════════════════════ */
 #site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 18px 0;
-  transition: background 0.4s var(--ease-out),
-              padding 0.4s var(--ease-out),
-              box-shadow 0.4s;
-}
-
-#site-header.scrolled {
+  position: relative;
   background: var(--slate);
-  padding: 12px 0;
+  padding: 18px 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.25);
 }
 
