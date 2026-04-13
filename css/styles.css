@@ -872,14 +872,13 @@ h1, h2, h3, h4 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
   padding-bottom: 64px;
-  border-bottom: 1px solid rgba(143,175,140,0.15);
 }
 
 .footer-logo {
-  height: 48px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   opacity: 0.9;
@@ -959,10 +958,9 @@ h1, h2, h3, h4 {
 
 .footer-bottom__inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .footer-bottom p {
@@ -975,6 +973,10 @@ h1, h2, h3, h4 {
   transition: color 0.25s;
 }
 .footer-bottom a:hover { color: var(--sage-light); }
+
+.footer-bottom__powered {
+  color: rgba(248,246,241,0.35);
+}
 
 /* ═══════════════════════════════════════════════════════════
    SECTION MATERIAL TEXTURES
@@ -1051,7 +1053,6 @@ h1, h2, h3, h4 {
   .process-cards      { flex-direction: column; }
   .process-arrow      { transform: rotate(90deg); width: auto; height: 40px; }
   .testimonials-grid  { grid-template-columns: 1fr; }
-  .footer-brand { grid-column: 1 / -1; }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1066,7 +1067,7 @@ h1, h2, h3, h4 {
   .features-grid     { grid-template-columns: 1fr; }
   .process-cards     { flex-direction: column; }
   .footer-grid       { grid-template-columns: 1fr; gap: 36px; }
-  .footer-bottom__inner { flex-direction: column; align-items: flex-start; }
+  .footer-bottom__inner { align-items: center; }
 
   .cta-banner__actions { flex-direction: column; align-items: stretch; text-align: center; }
   .btn--lg { width: 100%; text-align: center; }
