@@ -521,6 +521,7 @@ h1, h2, h3, h4 {
 }
 
 .feature-card__title {
+  font-family: var(--ff-head);
   font-size: clamp(1.9rem, 4.5vw, 3.2rem);
   font-weight: 700;
   color: var(--white);
