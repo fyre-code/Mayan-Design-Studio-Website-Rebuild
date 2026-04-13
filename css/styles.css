@@ -336,6 +336,11 @@ h1, h2, h3, h4 {
   animation: fadeUp 1s var(--ease-out) 0.4s both;
 }
 
+.hero-headline__line {
+  display: block;
+  white-space: nowrap;
+}
+
 .hero-tagline {
   font-family: var(--ff-body);
   font-size: clamp(1rem, 2vw, 1.2rem);
