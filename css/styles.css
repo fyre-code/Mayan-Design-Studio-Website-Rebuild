@@ -90,7 +90,7 @@ h1, h2, h3, h4 {
   justify-content: center;
   font-family: var(--ff-body);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 15px 38px;
