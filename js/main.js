@@ -299,25 +299,8 @@ function initHeroCanvas() {
 // Header scrolls with the page — no scroll listener needed.
 function initHeader() {}
 
-/* ── 3. SCROLL REVEAL ────────────────────────────────────── */
-function initScrollReveal() {
-  const targets = document.querySelectorAll('.reveal');
-  if (!targets.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
-  });
-
-  targets.forEach(el => observer.observe(el));
-}
+/* ── 3. SCROLL REVEAL — removed per design ──────────────── */
+function initScrollReveal() {}
 
 /* ── 4. FOOTER YEAR ─────────────────────────────────────── */
 function initFooterYear() {
