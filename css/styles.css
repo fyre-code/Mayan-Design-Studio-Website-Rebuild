@@ -386,7 +386,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  border: 1px solid rgba(44,62,53,0.1);
+  border: 2px solid rgba(44,62,53,0.35);
   overflow: hidden;
 }
 
@@ -396,7 +396,7 @@ h1, h2, h3, h4 {
 
 /* Divider between columns */
 .projects-table__cell:nth-child(odd) {
-  border-right: 1px solid rgba(44,62,53,0.1);
+  border-right: 2px solid rgba(44,62,53,0.35);
 }
 
 /* Description cells (row 1) */
@@ -1048,6 +1048,22 @@ h1, h2, h3, h4 {
   :root { --section-pad: 72px; }
 
   .projects-table     { grid-template-columns: 1fr; }
+
+  /* Group all Residential cells first, then all Commercial cells */
+  .projects-table__cell:nth-child(1)  { order: 1; }
+  .projects-table__cell:nth-child(3)  { order: 2; }
+  .projects-table__cell:nth-child(5)  { order: 3; }
+  .projects-table__cell:nth-child(7)  { order: 4; }
+  .projects-table__cell:nth-child(9)  { order: 5; }
+  .projects-table__cell:nth-child(2)  { order: 6; }
+  .projects-table__cell:nth-child(4)  { order: 7; }
+  .projects-table__cell:nth-child(6)  { order: 8; }
+  .projects-table__cell:nth-child(8)  { order: 9; }
+  .projects-table__cell:nth-child(10) { order: 10; }
+
+  /* Remove column divider; replace with horizontal section separator */
+  .projects-table__cell:nth-child(odd) { border-right: none; }
+  .projects-table__cell:nth-child(2)   { border-top: 3px solid rgba(44,62,53,0.35); }
   .partners-grid      { grid-template-columns: 1fr 1fr; }
   .features-grid      { grid-template-columns: 1fr 1fr; }
   .process-cards      { flex-direction: column; }
