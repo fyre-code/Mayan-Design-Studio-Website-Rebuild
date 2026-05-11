@@ -1009,11 +1009,11 @@ h1, h2, h3, h4 {
     center / cover;
 }
 
-/* Why Choose Us — dark granite on deep slate */
+/* Why Choose Us — Mayan tile mood board (sage/forest tiles) */
 #why-us {
   background:
     linear-gradient(rgba(44,62,53,0.88), rgba(44,62,53,0.88)),
-    url('https://images.unsplash.com/photo-1484955172689-05a61e0c3b26?w=1600&q=70&auto=format')
+    url('../images/mayan-tile-selection.png')
     center / cover;
 }
 
@@ -1025,11 +1025,11 @@ h1, h2, h3, h4 {
     center / cover;
 }
 
-/* Testimonials — rich dark leather */
+/* Testimonials — Mayan tile board (sage marble, mosaic, scalloped) */
 #testimonials {
   background:
     linear-gradient(rgba(44,62,53,0.88), rgba(44,62,53,0.88)),
-    url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1600&q=70&auto=format')
+    url('../images/mayan-tile-board-vertical.png')
     center / cover;
 }
 
